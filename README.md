@@ -1,50 +1,39 @@
-# React + TypeScript + Vite
+# Instrucciones para Ejecutar el Proyecto Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Sigue estos pasos para ejecutar el proyecto frontend en tu máquina local:
 
-Currently, two official plugins are available:
+1. **Descargar el Repositorio**:
+   - Clona el repositorio utilizando el siguiente comando o descárgalo como un archivo ZIP:
+     ```bash
+     git clone <URL_DEL_REPOSITORIO>
+     ```
+   - Asegúrate de que lo descargues en una carpeta dedicada para el proyecto.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+2. **Abrir la Terminal**:
+   - Abre tu terminal o símbolo del sistema.
 
-## Expanding the ESLint configuration
+3. **Navegar a la Carpeta del Proyecto**:
+   - Usa el comando `cd` para navegar a la carpeta del proyecto. Por ejemplo:
+     ```bash
+     cd ruta/a/tu/proyecto
+     ```
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+4. **Instalar Dependencias**:
+   - Ejecuta el siguiente comando para instalar todas las dependencias del proyecto:
+     ```bash
+     npm install
+     ```
 
-- Configure the top-level `parserOptions` property like this:
+5. **Iniciar el Proyecto**:
+   - Una vez instaladas las dependencias, ejecuta el siguiente comando para levantar el proyecto:
+     ```bash
+     npm run dev
+     ```
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+6. **Acceder a la Aplicación**:
+   - Abre tu navegador y ve a la URL que indica la consola. Por defecto, Vite suele correr en `http://localhost:3000`, pero verifica la consola para confirmar la URL correcta.
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+### Notas Adicionales
+- Asegúrate de tener [Node.js](https://nodejs.org/) instalado en tu máquina. Se recomienda usar la versión LTS.
+- Este proyecto utiliza [Vite](https://vitejs.dev/) como herramienta de construcción, lo que permite un desarrollo rápido y optimizado.
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
