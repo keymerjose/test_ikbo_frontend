@@ -5,7 +5,7 @@ Sigue estos pasos para ejecutar el proyecto frontend en tu máquina local:
 1. **Descargar el Repositorio**:
    - Clona el repositorio utilizando el siguiente comando o descárgalo como un archivo ZIP:
      ```bash
-     git clone <URL_DEL_REPOSITORIO>
+     git clone https://github.com/keymerjose/test_ikbo_frontend
      ```
    - Asegúrate de que lo descargues en una carpeta dedicada para el proyecto.
 
